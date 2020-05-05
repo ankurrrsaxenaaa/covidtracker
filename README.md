@@ -10,7 +10,7 @@ The steps to run the docker image in a container are as follows:
 
 2. Open the terminal and run a clean maven build. This will build a jar file in the target folder.
 
-3. Switch to root user to use dokcerfile and go into the project directory.
+3. Switch to root user to use dockerfile and go into the project directory.
 
 4. Run the command ```docker login``` and put in your dockerhub username and password. This should authorise you.
 
