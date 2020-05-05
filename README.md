@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/ankurrrsaxenaaa/covidtracker/tree/circleci-project-setup.svg?style=svg&circle-token=8470afb6312e3a214b268f191be05a324a41a72f)](https://circleci.com/gh/ankurrrsaxenaaa/covidtracker/tree/circleci-project-setup)
+[![CircleCI](https://circleci.com/gh/ankurrrsaxenaaa/covidtracker/tree/master.svg?style=svg&circle-token=8470afb6312e3a214b268f191be05a324a41a72f)](https://circleci.com/gh/ankurrrsaxenaaa/covidtracker/tree/master)
 # COVID Tracker 0.1.0
 
 ### How to run the application
