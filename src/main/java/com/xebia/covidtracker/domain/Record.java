@@ -57,18 +57,13 @@ public class Record {
         return dead;
     }
 
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public Record update(Record copyFrom) {
+    public void update(Record copyFrom) {
         this.tested += copyFrom.getTested();
         this.confirmed += copyFrom.getConfirmed();
         this.active += copyFrom.getActive();
         this.recovered += copyFrom.getRecovered();
         this.dead += copyFrom.getDead();
         this.updatedAt = new Date();
-        return this;
     }
 
     public static final class Builder {
