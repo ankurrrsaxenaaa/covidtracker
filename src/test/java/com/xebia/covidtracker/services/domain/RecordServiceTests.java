@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.data.domain.Sort;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -176,9 +177,9 @@ public class RecordServiceTests {
         selected =null;
 
         when(recordRepository.findAll()).thenReturn(records);
-        when(recordRepository.findAll()).thenReturn(records);
+        when(recordRepository.findByLocationInIgnoreCase(any())).thenReturn(records);
 
-        found = recordService.findByQuery(locations,type,selected);
+        found = recordService.findByQuery(locationss,type,selected);
         assertThat(found).hasSize(2);
 
         type ="total";
@@ -186,23 +187,23 @@ public class RecordServiceTests {
         when(recordRepository.findAll()).thenReturn(records);
         when(recordRepository.findAll()).thenReturn(records);
 
-        found = recordService.findByQuery(locations,type,selected);
+        found = recordService.findByQuery(locationss,type,selected);
         assertThat(found).hasSize(1);
 
         type = "min";
         selected = "active";
 
         when(recordRepository.findAll()).thenReturn(records);
-        when(recordRepository.findAllRecords(any())).thenReturn(records);
+        when(recordRepository.findByLocationInIgnoreCase(any(), any())).thenReturn(records);
 
-        found = recordService.findByQuery(locations,type,selected);
+        found = recordService.findByQuery(locationss,type,selected);
         assertThat(found).hasSize(1);
 
         type = "max";
         when(recordRepository.findAll()).thenReturn(records);
-        when(recordRepository.findAllRecords(any())).thenReturn(records);
+        when(recordRepository.findByLocationInIgnoreCase(any(), any())).thenReturn(records);
 
-        found = recordService.findByQuery(locations,type,selected);
+        found = recordService.findByQuery(locationss,type,selected);
         assertThat(found).hasSize(1);
     }
 
